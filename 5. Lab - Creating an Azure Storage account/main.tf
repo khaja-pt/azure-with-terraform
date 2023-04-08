@@ -11,7 +11,7 @@ terraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "3.8.0"
+      version = "3.51.0"
     }
   }
 }
@@ -26,13 +26,13 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "appgrp" {
   name     = "app-grp"
-  location = "North Europe"
+  location = "northeurope"
 }
 
 resource "azurerm_storage_account" "appstore566565637" {
   name                     = "appstore566565637"
   resource_group_name      = "app-grp"
-  location                 = "North Europe"
+  location                 = "northeurope
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind = "StorageV2"
